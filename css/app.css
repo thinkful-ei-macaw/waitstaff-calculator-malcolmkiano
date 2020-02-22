@@ -1,0 +1,170 @@
+/* general styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  height: 100%;
+  background-image: url('https://picsum.photos/id/258/1920/1080');
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #01AFAC;
+  background-blend-mode: hard-light;
+  margin: 0;
+  padding: 0;
+}
+
+/* main section and type styles */
+header {
+  padding-top: 2rem;
+  text-align: center;
+  position: fixed;
+  color: #FFF;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 6.5rem;
+}
+
+footer {
+  text-align: right;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+/* box styles */
+.box {
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  background: #FFFFFF;
+  border-radius: .3rem;
+}
+
+.box h2 {
+  border-bottom: 1px solid #EEEEEE;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+/* button & input styles */
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+  margin: .5rem;
+  padding: .8em 1.5em;
+  background: #01AFAC;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  border-radius: .3rem;
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  background: rgb(1, 139, 137);
+}
+
+.group label, .group span {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+.group span:last-of-type {
+  font-weight: bold;
+}
+
+.group label::after {
+  content: attr(data-unit);
+  position: absolute;
+  right: .5em;
+  user-select: none;
+  opacity: 0.5;
+}
+
+input:not([type=submit]):not([type=reset]) {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  padding: .5em;
+  border: 1px solid #DDDDDD;
+  background: #FFFFFF;
+  border-radius: .2rem;
+  outline: none;
+  width: 50%;
+}
+
+input:not([type=submit]):not([type=reset]):focus {
+  border-color: #01AFAC;
+}
+
+#reset {
+  background: #222;
+  margin: 0;
+}
+
+#reset:hover {
+  background: #000;
+}
+
+/* not mobile, change font size */
+@media screen and (min-width: 430px) { 
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .column {
+    float: left;
+    width: calc(50% - 1rem);
+  }
+
+  .column:not(:first-of-type){
+    margin-left: 2rem;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+  }
+}
